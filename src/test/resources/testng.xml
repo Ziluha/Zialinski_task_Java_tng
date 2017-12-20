@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="MySuite" parallel="tests" thread-count="2">
+    <test name="ChromeTest" group-by-instances="true">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="com.gmail.authorization.AuthorizationTest" >
+            </class>
+        </classes>
+    </test>
+    <test name="FirefoxTest" group-by-instances="true">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="com.gmail.authorization.AuthorizationTest" >
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,10 @@
+com\pages\objects\gmail\authorization\GmailPasswordPage.class
+com\pages\objects\gmail\mail\GmailDraftsPage.class
+com\pages\objects\gmail\mail\GmailInboxPage.class
+com\properties\PropertiesReading.class
+com\pages\base\BasePage.class
+com\pages\objects\gmail\authorization\GmailLoginPage.class
+com\driver\DriverInitQuit.class
+com\driver\config\DriverConfig.class
+com\pages\factory\PagesFactory.class
+com\reports\eventfiring\EventHandler.class
