@@ -14,17 +14,12 @@ public class BaseTest {
     protected PagesFactory pages;
     private String browserName;
 
-    @BeforeTest
-    @Parameters("browser")
-    public void initBrowser(String browser){
-        browserName = browser;
-    }
-
     @BeforeMethod
-    public void initTest(){
+    @Parameters("browser")
+    public void initTest(String browser){
         driverConfig = new DriverConfig();
         driverInitQuit = new DriverInitQuit();
-        driver = driverInitQuit.initDriver(browserName);
+        driver = driverInitQuit.initDriver(browser);
         driverConfig.loadApp(driver, PropertiesReading.getURLs().getProperty("gmailURL"));
         pages = new PagesFactory(driver);
     }

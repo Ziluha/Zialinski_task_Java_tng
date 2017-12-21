@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Zialinski_task_tng" />
+        <module name="afsfa" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Zialinski_task_tng" target="1.8" />
+      <module name="afsfa" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
