@@ -3,6 +3,10 @@
 
 
 <suite name="Suite" parallel="tests">
+    <listeners>
+        <listener class-name="utils.listeners.TestListener"/>
+        <listener class-name="utils.listeners.AnnotationTransformer"/>
+    </listeners>
     <test name="ChromeTest">
         <parameter name="browser" value="Chrome"/>
         <classes>

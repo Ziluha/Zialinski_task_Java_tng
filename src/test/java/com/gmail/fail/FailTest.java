@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class FailTest extends BaseTest{
-    @Test
+    @Test(description = "Fail check")
     public void checkFail(){
         pages.getLoginPage().inputLogin(PropertiesReading.getCredentials().getProperty("invalidLogin"));
         pages.getLoginPage().submitLogin();

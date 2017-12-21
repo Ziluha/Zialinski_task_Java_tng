@@ -4,10 +4,12 @@ import com.gmail.BaseTest;
 import com.properties.PropertiesReading;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.extentReports.ExtentTestManager;
 
 public class AuthorizationTest extends BaseTest{
-    @Test
+    @Test(description = "Authorization with valid data")
     public void authWithValidData(){
+        ExtentTestManager.getTest();
         pages.getLoginPage().inputLogin(PropertiesReading.getCredentials().getProperty("validLogin"));
         pages.getLoginPage().submitLogin();
         pages.getPasswordPage().inputPassword(PropertiesReading.getCredentials().getProperty("validPassword"));
@@ -16,7 +18,7 @@ public class AuthorizationTest extends BaseTest{
                 "User was not logged in");
     }
 
-    @Test
+    @Test(description = "Authorization with invalid login")
     public void authWithInvalidLogin(){
         pages.getLoginPage().inputLogin(PropertiesReading.getCredentials().getProperty("invalidLogin"));
         pages.getLoginPage().submitLogin();
@@ -24,7 +26,7 @@ public class AuthorizationTest extends BaseTest{
                 "Login Error Label is not presented");
     }
 
-    @Test
+    @Test(description = "Authorization with invalid password")
     public void authWithInvalidPassword(){
         pages.getLoginPage().inputLogin(PropertiesReading.getCredentials().getProperty("validLogin"));
         pages.getLoginPage().submitLogin();

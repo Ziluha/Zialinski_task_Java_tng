@@ -15,7 +15,7 @@ public class DraftsTest extends BaseTest{
         pages.getPasswordPage().submitPassword();
     }
 
-    @Test
+    @Test(description = "Adding massage to drafts")
     public void addMessageToDrafts(){
         pages.getInboxPage().clickComposeButton();
         pages.getInboxPage().inputMessageSubject("example");
@@ -28,7 +28,7 @@ public class DraftsTest extends BaseTest{
                 "No message with this subject in drafts");
     }
 
-    @Test
+    @Test(description = "deleting message from drafts")
     public void deleteMessageFromDrafts(){
         pages.getInboxPage().clickDraftsLink();
         Assert.assertTrue(pages.getDraftsPage().isDraftPageOpened(), "Draft Page is not opened");
